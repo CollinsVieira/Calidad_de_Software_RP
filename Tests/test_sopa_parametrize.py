@@ -23,13 +23,13 @@ def test_validar_palabras(n, palabras, expected):
 def test_validar_numero_valido(input, expected):
     assert validar_numero(input) == expected
 
+
 # Pruebas para crear_sopa_de_letras
 @pytest.mark.parametrize("n, palabras", [
     (10, []),
     (10, ['CASA', 'PERRO', 'GATO'])
 ])
 def test_creacion_sopa_valida(n, palabras):
-    # No debería lanzar ninguna excepción
     crear_sopa_de_letras(n, palabras)
 
 @pytest.mark.parametrize("n, palabras", [
